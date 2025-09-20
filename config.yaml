@@ -1,0 +1,11 @@
+network:
+  host: localhost
+  port: 8080
+
+llm:
+  model: "xai:grok-4"
+  api_key: saas
+
+embeddings:
+  model: "openai:text-embeddings-3"
+  api_key: saas
