@@ -1,0 +1,5 @@
+models:
+  - name: astro-v1
+    prompt: "mogi mogi mogi"
+  - name: astro-v2
+    prompt: "sus sus sus"
