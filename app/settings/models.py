@@ -1,4 +1,5 @@
 import os
+from datetime import datetime
 from functools import lru_cache
 
 import yaml
@@ -8,6 +9,7 @@ from pydantic import BaseModel
 class Model(BaseModel):
     name: str
     prompt: str
+    created_at: datetime
 
 class Models(BaseModel):
     models: list[Model]
@@ -20,4 +22,4 @@ class Models(BaseModel):
 
 @lru_cache
 def get_models():
-    return Models(os.environ.get("STARDUST_MODELS_PATH"))
+    return Models(os.environ.get("STARDUST_MODELS_PATH")).models

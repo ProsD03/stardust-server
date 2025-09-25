@@ -1,5 +1,4 @@
 models:
   - name: astro-v1
     prompt: "mogi mogi mogi"
-  - name: astro-v2
-    prompt: "sus sus sus"
+    created_at: 2025-09-25T21:38:56
