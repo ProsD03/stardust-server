@@ -26,9 +26,7 @@ class BearerMiddleware(BaseHTTPMiddleware):
                             content=ErrorResponse(error_code="AuthenticationRequired").model_dump_json())
 
         token = request.headers.get('Authorization').split(" ")[1]
-        print(token)
         if not self.token_regex.match(token):
-            print("regex_fail")
             return Response(status_code=401,
                             content=ErrorResponse(error_code="AuthenticationFailed").model_dump_json())
 
